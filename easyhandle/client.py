@@ -42,7 +42,7 @@ class HandleClient:
         }
         headers.update(self._get_auth_header())
 
-        return requests.put(url, headers=headers, data=json.dumps(pid_document), auth=headers, verify=self.verify)
+        return requests.put(url, headers=headers, data=json.dumps(pid_document), verify=self.verify)
 
     def put_handle_for_urls(self, urls: dict) -> Response:
         handle = f'{self.prefix}/{uuid.uuid1()}'

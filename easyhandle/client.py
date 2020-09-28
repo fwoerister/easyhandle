@@ -48,9 +48,11 @@ class HandleClient:
         handle = f'{self.prefix}/{uuid.uuid1()}'
         url_entries = []
 
+        index = 1
         for entry_type in urls.keys():
             url = urls[entry_type]
-            url_entries.append(create_entry(1, entry_type, url))
+            url_entries.append(create_entry(index, entry_type, url))
+            index += 1
 
         return self.put_handle({
             'handle': handle,
@@ -70,7 +72,7 @@ class BasicAuthHandleClient(HandleClient):
         Handle Client implementation that uses `BasicAuth` for authentication
     '''
 
-    def __init__(self, base_url: str, prefix: str, verify: bool, username:str, password:str):
+    def __init__(self, base_url: str, prefix: str, verify: bool, username: str, password: str):
         super().__init__(base_url, prefix, verify)
         self.username = username
         self.password = password

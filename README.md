@@ -1,4 +1,5 @@
 [![PyPI version](https://badge.fury.io/py/easyhandle.svg)](https://badge.fury.io/py/easyhandle)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
 # easyhandle
 A lightweight python package for accessing handle services.

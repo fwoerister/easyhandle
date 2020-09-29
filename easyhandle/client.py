@@ -28,11 +28,11 @@ class HandleClient:
 
     def get_handle(self, pid: str) -> Response:
         url = assemble_pid_url(self.base_url, pid)
-        return requests.get(url, header=self._get_auth_header(), verify=self.verify)
+        return requests.get(url, headers=self._get_auth_header(), verify=self.verify)
 
     def get_handle_by_type(self, pid: str, type: str) -> Response:
         url = assemble_pid_url(self.base_url, pid)
-        return requests.get(url, params={'type': type}, header=self._get_auth_header(), verify=self.verify)
+        return requests.get(url, params={'type': type}, headers=self._get_auth_header(), verify=self.verify)
 
     def put_handle(self, pid_document: dict) -> Response:
         url = assemble_pid_url(self.base_url, pid_document.get('handle'))
@@ -61,7 +61,7 @@ class HandleClient:
 
     def delete_handle(self, pid: str) -> Response:
         url = assemble_pid_url(self.base_url, pid)
-        return requests.delete(url, header=self._get_auth_header(), verify=self.verify)
+        return requests.delete(url, headers=self._get_auth_header(), verify=self.verify)
 
     def _get_auth_header(self) -> dict:
         return {}

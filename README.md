@@ -1,3 +1,5 @@
+[![PyPI version](https://badge.fury.io/py/easyhandle.svg)](https://badge.fury.io/py/easyhandle)
+
 # easyhandle
 A lightweight python package for accessing handle services.
 

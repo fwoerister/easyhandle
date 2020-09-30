@@ -2,7 +2,7 @@ def assemble_pid_url(base_url, pid):
     if base_url[-1] != '/':
         base_url += '/'
 
-    return f'{base_url}api/handles/{pid}'
+    return '{}api/handles/{}'.format(base_url, pid)
 
 
 def create_entry(index, type, url):

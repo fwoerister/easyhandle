@@ -9,7 +9,7 @@ with open(path.join(here, 'README.md')) as f:
 
 setup(
     name='easyhandle',
-    version='0.0.5',
+    version='0.0.6',
     description='A lightweight python package for accessing handle services',
     long_description=long_description,
     long_description_content_type='text/markdown',
